@@ -21,7 +21,7 @@ class LoginPage extends BasePage {
     }
 
     open() {
-        super.open('');
+        super.open('/'); // Переход на главную страницу
     }
 
     login(username, password) {
@@ -30,7 +30,7 @@ class LoginPage extends BasePage {
         this.loginButton.click();
     }
 
-    verifiMSG(text) {
+    verifyErrorMessage(text) {
         this.errorMSG.should('have.text', text)
     }
 }

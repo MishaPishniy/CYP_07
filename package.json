@@ -3,13 +3,27 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx cypress run --spec 'cypress/e2e/4-POM/login.cy.js' --browser chrome",
+    "test:record": "cypress run --record",
+    "test:reporter": "cypress run --reporter mochawesome",
+    "test:spec": "cypress run --spec",
+    "test:tag": "cypress run --tag",
+    "test:config": "cypress run --config",
+    "test:env": "cypress run --env",
+    "test:global": "cypress run --global"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "@cypress/webpack-preprocessor": "^6.0.2",
+    "babel-loader": "^9.2.1",
     "cypress": "^13.15.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
   }
 }

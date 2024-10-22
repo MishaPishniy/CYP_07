@@ -18,3 +18,10 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+if (typeof process === 'undefined') {
+    window.process = {
+      env: {}
+    };
+  }
+  
